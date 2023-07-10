@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+
+if __name__ == '__main__':
+    import sys
+    import degiro_cli.history
+    res = degiro_cli.history.run_cli()
+    sys.exit(res)
