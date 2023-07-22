@@ -52,7 +52,7 @@ async def run_one(
                 data_type=dapi.PRICE.TYPE.OHLC
                 )
     except Exception as exc:
-        print(f"Error on symbol {exchange}.{symbol}", file=sys.stderr)
+        print(f"Error on symbol {exchange}.{symbol}: {exc}", file=sys.stderr)
         return exc
 
     writer = csv.writer(sys.stdout, delimiter=',')
@@ -172,6 +172,7 @@ def run_cli():
             }[args.period.lower()]
 
     session = get_session_from_cache()
+    session.update_throttling(max_requests=7, period_seconds=1)
 
     symbols = sys.stdin
     if len(args.symbols) > 0:
