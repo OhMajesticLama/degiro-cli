@@ -150,8 +150,8 @@ async def login():
                 cookies=session.cookies,
                 ),
             }, fh)
-    # Delete file in 1 hour
-    expire_path(tmp_path, 60*60)
+    # Delete file in 3 hour
+    expire_path(tmp_path, 3*60*60)
 
 async def _get_session_from_cache() -> dapi.Session:
     cache_path = get_tmp_path()
@@ -164,7 +164,7 @@ async def _get_session_from_cache() -> dapi.Session:
     session._cookies = session_d['session']['cookies']
     await wapi.get_config(session)
     await wapi.get_client_info(session)
-    exc_dict = await dapi.get_exchange_dictionary(session)
+    exc_dict = await dapi.get_dictionary(session)
     return dapi.Session(session, exc_dict)
 
 def get_session_from_cache() -> dapi.Session:
