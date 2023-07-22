@@ -8,14 +8,14 @@ import setuptools
 
 
 if __name__ == '__main__':
-    description = "Command line tools for Degiro"
+    description = "Unofficial command line tools for Degiro"
     readme_path = os.path.join(os.path.dirname(__file__), 'README.md')
     with open(readme_path, "r") as fh:
         long_description = fh.read()
 
     setuptools.setup(
         name="degiro-cli",
-        version="0.1.0",
+        version="0.1.1",
         author_email="ohmajesticlama@gmail.com",
         description=description,
         long_description=long_description,

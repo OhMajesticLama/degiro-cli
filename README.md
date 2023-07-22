@@ -13,7 +13,7 @@ orders.
 ## Installation
 
 ``` sh
-pip3 install degirocli
+pip3 install degiro-cli
 ```
 
 ## Use
@@ -133,7 +133,7 @@ degiro-search --index 'EURO STOXX 50'
 
 ```
 
-## By Index
+## Get symbol history
 ``` sh
 degiro-history --period 1m EPA.SAF
 # exchange,symbol,date,currency,open,high,low,close
