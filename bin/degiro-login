@@ -3,6 +3,6 @@
 
 if __name__ == '__main__':
     import sys
-    import degiro_cli.login
-    res = degiro_cli.login.run_cli()
+    import degirocli.login
+    res = degirocli.login.run_cli()
     sys.exit(res)

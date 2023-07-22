@@ -3,6 +3,6 @@
 
 if __name__ == '__main__':
     import sys
-    import degiro_cli.search
-    res = degiro_cli.search.run_cli()
+    import degirocli.search
+    res = degirocli.search.run_cli()
     sys.exit(res)
