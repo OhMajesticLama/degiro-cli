@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     setuptools.setup(
         name="degiro-cli",
-        version="0.1.1",
+        version="0.1.2",
         author_email="ohmajesticlama@gmail.com",
         description=description,
         long_description=long_description,
@@ -31,6 +31,7 @@ if __name__ == '__main__':
             os.path.join('bin', 'degiro-history'),
             os.path.join('bin', 'degiro-search'),
             ],
+        python_requires=">=3.8",
         install_requires=[
             'degiroasync >= 0.20.0',
             ],
