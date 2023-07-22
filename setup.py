@@ -20,22 +20,19 @@ if __name__ == '__main__':
         description=description,
         long_description=long_description,
         long_description_content_type='text/markdown',
-        url="https://github.com/OhMajesticLama/degiro_cli",
+        url="https://github.com/OhMajesticLama/degiro-cli",
         project_urls={
             'Documentation':
-                'https://ohmajesticlama.github.io/degiro_cli/index.html'
+                'https://ohmajesticlama.github.io/degiro-cli'
             },
         packages=setuptools.find_packages(),
         scripts=[
             os.path.join('bin', 'degiro-login'),
-            os.path.join('bin', 'degiro-logout'),
             os.path.join('bin', 'degiro-history'),
-            os.path.join('bin', 'degiro-portfolio'),
             os.path.join('bin', 'degiro-search'),
             ],
         install_requires=[
-            'degiroasync >= 0.18.0',
-            #'invaist >= 0.16.0',
+            'degiroasync >= 0.20.0',
             ],
         extras_require={
             'dev': [
@@ -61,9 +58,9 @@ if __name__ == '__main__':
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
             "Operating System :: OS Independent",
-            "Development Status :: 3 - Alpha",
-            "Topic :: Software Development :: Libraries :: Python Modules",
-            "Intended Audience :: Developers",
+            "Development Status :: 4 - Beta",
+            "Intended Audience :: End Users/Desktop",
+            "Topic :: Office/Business :: Financial :: Investment"
         ],
         test_suite='pytest',
         tests_require=['pytest']
